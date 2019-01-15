@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>test</title>
+</head>
+
+<body>
+    <button onclick="Suma()">Suma</button>
+    <button onclick="Produs()">Produs</button>
+    <button onclick="Ma()">MediaAritmetica</button>
+    <button onclick="MinMax()">MinMax</button>
+    <pre id="ex"></pre>
+    <script>
+        var suma = 0;
+        var sir = [5, 4, 3, 2, 1, 50, 15, 35, 70, 90, 100];
+        var Suma = function () {
+            for (var i = 0; i < sir.length; i++) {
+                suma += sir[i]
+               
+            }
+            console.log(suma);
+            document.getElementById("ex").innerHTML = suma;
+        }
+        var Produs = function () {
+            suma = 1;
+            for (var i = 0; i < sir.length; i++) {
+                suma = suma * sir[i]
+            }
+            document.write(suma)
+        }
+        var Ma = function () {
+            for (var i = 0; i < sir.length; i++) {
+                suma = suma + sir[i] / sir.length
+            }
+            document.write(suma)
+        }
+        var MinMax = function () {
+            var max = Math.max.apply(Math, sir);
+            var min = Math.min.apply(Math, sir);
+            document.write("Minimul din sir este " + min + " Iar maximul este " + max);
+            console.log(min)
+        }
+        var nr1 = 11;
+        var nr2 = 11;
+        if (nr1 >= nr2){
+            document.write("nr 1 mai mare sa uegal");
+        }
+        else if (nr1==nr2){
+            document.write("numerele sunt egale")
+        }
+        else  {
+            document.write("nr 1 mai mic ca nr2");
+        }
+        var materii="chimie";
+        switch(materii){
+            case "matematica": alert('materia preferata');break;
+            case "romana": alert ('materia romana');break;
+            case "chimie":alert ('materie chimie');break;
+            default: alert('nu stiu care e');
+        }
+    </script>
+</body>
+
+</html>
