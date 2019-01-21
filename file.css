@@ -1,102 +1,50 @@
-@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Wallpoet');
 
 html, body {
-    height: 100%;
+	margin: 0;
+	padding: 0;
+	height: 100%;
 }
-body {    
-    padding-top: 75px;
+
+body {
+	margin: 30px;
+	background: rgb(15, 15, 15);
+	color: rgb(134, 254, 25);
+	text-shadow: 0 0 rgba(134, 254, 25, 0.5);
+	font-family: 'Wallpoet', cursive;
+	text-align: center;
 }
-body.navbar-more-show  {
+
+.compass {
+	position: relative;
+	width: 260px;
+	height: 260px;
+	margin: 20px auto;
+	background: #222;
+	padding: 20px;
+	border-radius: 40px;
+	border: 5px solid #444;
 	overflow: hidden;
 }
 
-.animate {
-    -webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-.navbar {
-    height: calc(100%);
-	max-height: 300px;
-	-webkit-transform: translate(0px, calc(-100% + 69px));
-	transform: translate(0px, calc(-100% + 69px));
-}
-.navbar .container:not(.navbar-more) {
-    padding: 0px;
-}
-.navbar-more-overlay {
-	background-color: rgba(102, 102, 102, 0.55);
-	display: none;
-	height: 100%;
-	left: 0px;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	z-index: 1029;
-}
-.navbar-more-show > .navbar-more-overlay {
-	display: block;
-}
-.navbar-more-show > .navbar {
-	-webkit-transform: translate(0px, 0px);
-	transform: translate(0px, 0px);
-}
-.navbar-nav.mobile-bar {
-	list-style: none;
-	-ms-box-orient: horizontal;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-align-items: stretch;
-	align-items: stretch;
-	margin: 0px 0px;
-}
-.navbar-nav.mobile-bar > li {
-	-webkit-flex-grow: 1;
-	flex-grow: 1;
-	text-align: center;
-}
-.navbar-nav.mobile-bar > li > a > span.menu-icon {
-	display: block;
-	font-size: 1.8em;
-}
-.navbar-more {
-	background-color: rgb(255, 255, 255);
-	height: calc(100% - 69px);
-	overflow: auto;
-}
-.navbar-more .navbar-form {
-	border-width: 0px;
-}
-.navbar-more .navbar-nav > li > a {
-    color: rgb(64, 64, 64);   
-}
-.navbar-more > .navbar-nav > li > a > span.menu-icon {
-	margin-left: 10px;
-	margin-right: 10px;
+.compass .disc {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 200;
+	background: url('http://dev.rvltn.eu/compass/compass.svg');
+	width: 260px;
+	height: 260px;
+	background-size: 100%;
 }
 
-@media (min-width: 768px) {
-	.navbar {
-        height: auto;
-		-webkit-transform: translate(0px, 0px);
-		transform: translate(0px, 0px);
-	}
-	.navbar-nav.mobile-bar {
-		display: block;
-		max-height: 64px;
-		margin: 0px -15px;
-	}
-	.navbar-nav.mobile-bar > li > a > span.menu-icon {
-		display: none;
-	}
+.compass .arrow {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+	background: url('http://dev.rvltn.eu/compass/arrow.svg');
+	width: 260px;
+	height: 260px;
+	background-size: 100%;
 }
